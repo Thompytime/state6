@@ -8,10 +8,14 @@
 </head>
 <body>
     <div id="game-container">
-        <h1>Right State!</h1>
-        <!-- Add an image container above the game box -->
-        <div id="image-container"></div>  <!-- This will hold the county/state image -->
-        <div id="word-container"></div>
+        <h1 id="title">Right State!</h1> <!-- Title for the game -->
+        
+        <!-- Image container to display the county/state image -->
+        <div id="image-container">
+            <img src="path_to_image.svg" alt="State or County Image"> <!-- Make sure to set the correct image path here -->
+        </div>
+
+        <div id="word-container"></div>  <!-- Word to be guessed -->
         <input type="text" id="guess-input" maxlength="30" autofocus>
         <button id="submit-btn">Submit Guess</button>
         <p id="incorrect-guesses">Incorrect Guesses: 0/5</p>

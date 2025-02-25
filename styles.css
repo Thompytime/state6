@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-    padding: 10px; /* Add padding for smaller screens */
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -17,8 +17,14 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px; /* Limit the max width to avoid overly stretched content */
+    max-width: 800px;  /* Increased max-width for a wider layout */
     box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 #word-container {
@@ -36,17 +42,17 @@ body {
 }
 
 #guess-input {
-    width: 80%;  /* Adjust input width to a percentage of the screen size */
-    max-width: 400px;  /* Limit the maximum width */
+    width: 80%;
+    max-width: 400px;
     height: 40px;
-    font-size: 1.5em;  /* Adjust font size for smaller screens */
+    font-size: 1.5em;
     text-align: center;
     padding: 0 10px;
 }
 
 #submit-btn {
     height: 44px;
-    font-size: 1.5em; /* Reduce font size for smaller screens */
+    font-size: 1.5em;
     padding: 0 10px;
 }
 
@@ -60,7 +66,7 @@ button:disabled {
 
 #image-container {
     padding-top: 20px;
-    height: 300px;  /* Adjust image height */
+    height: 450px; /* Increased height to make the image taller */
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -69,9 +75,10 @@ button:disabled {
 }
 
 #image-container img {
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    width: auto; /* Allow the image to be wider */
+    height: 100%; /* Increase the height to fill the container */
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    max-height: 100%; /* Ensure the image doesn't exceed the container height */
 }
 
 #incorrect-guesses, #game-status {
@@ -98,7 +105,7 @@ button:disabled {
     }
 
     #image-container {
-        height: 200px; /* Reduce image size on smaller screens */
+        height: 300px; /* Adjust image size on tablets */
     }
 
     #incorrect-guesses, #game-status {
@@ -108,7 +115,7 @@ button:disabled {
 
 @media (max-width: 480px) {
     body {
-        padding: 20px; /* Add more padding on very small screens */
+        padding: 20px;
     }
 
     #guess-input, #submit-btn {
@@ -120,7 +127,7 @@ button:disabled {
     }
 
     #image-container {
-        height: 150px;  /* Further reduce image height */
+        height: 250px; /* Adjust image height for smaller screens */
     }
 
     #incorrect-guesses, #game-status {
